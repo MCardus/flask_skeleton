@@ -1,10 +1,13 @@
-from flask import Blueprint, request
-import logging
+"""API services"""
+
 import json
-from api import logging_conf
+import logging
 import traceback
+from flask import Blueprint, request
+from api import logging_conf
 
 route = Blueprint('route', __name__)
+
 
 @route.route("/foo", methods=['GET'])
 @logging_conf.log_func()
@@ -22,7 +25,8 @@ def foo():
     except:
         error = traceback.format_exc()
         logging.error(error)
-        return json.dumps({"code":"400","error" : "Something went wrong"})
+        return json.dumps({"code": "400", "error": "Something went wrong"})
+
 
 @route.route("/baar", methods=['POST'])
 @logging_conf.log_func()

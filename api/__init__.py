@@ -1,9 +1,12 @@
-from flask import Flask
+"""API creation"""
 import os
+from flask import Flask
 
-def create_app(name= __name__, config=None, environment=None):
+
+def create_app(name=__name__, config=None, environment=None):
     """
     App factory
+    :param name: Flask app name
     :param config: Flask config
     :param environment: Env conf file
     :return:

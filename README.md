@@ -2,18 +2,18 @@
 
 ## Flask API Skeleton:
 
-This is a REST API Skeleton implemented in Flask. It has been tested in Python 3.6.4 and Flask 0.12.
+This is a simple REST API Skeleton implemented in Flask. It has been tested in Python 3.6.4 and Flask 0.12.
 
 
 Installation manual:
 
 * Install:
    ````
-   pip install .
+   pip install -r requirements.txt
    ````
 * Run tests
     ````
-   python -m unittest discover
+   python -m unittest discover api/tests
    ````
    
 * Run project
